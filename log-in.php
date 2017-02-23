@@ -16,7 +16,7 @@
     <!-- Custom CSS -->
     <link href="css/col.css" rel="stylesheet">
 
- 
+
 
 </head>
 
@@ -27,13 +27,13 @@
 <div id="loginbox">
 <div class="col-xs-3">
 <form action="checklogin.php" method="post">
-Username : <input type="text" class="form-control" name="username" size="20" /><br />
-Password : <input type="password" class="form-control" name="password" size="20" /><br />
+Username : <input type="text" class="form-control"  name="username" size="20" /><br />
+Password : <input type="password" class="form-control"  name="password" size="20" /><br />
 <input type="submit" value=" Log in " /></div>
 </div>
 </form>
 
-   
+
    </center>
 
 </body>

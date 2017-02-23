@@ -9,23 +9,23 @@ include("connect.php");
 // variable
 $username = $_POST['username'];
 //ประกาศตัวแปรชื่อ username โดยการรับค่ามาจากกล่อง username ที่หน้า Login
-$password = md5($_POST['password']);
+$password = $_POST['password'];
 //ประกาศตัวแปรชื่อ password โดยการรับค่ามาจากกล่อง password ที่หน้า Login
-if($username == '') {                    
+if($username == '') {
 echo "คุณยังไม่ได้กรอกชื่อผู้ใช้ครับ";
-} else if($password == '') {       
+} else if($password == '') {
 echo "คุณยังไม่ได้กรอกรหัสผ่านครับ";
 } else {                                               //ถ้ากรอกข้อมูลทั้งหมดแล้วให้ทำงานดังนี้
 $sql = mysql_query("SELECT * FROM user_nrm
-					WHERE 1");
+					WHERE username ='$username' and password ='$password' ");
 
 $num = mysql_num_rows($sql);
 	if($num <= 0){
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
+	echo "Username หรือ Password อาจจะผิดกรุณา Login ใหม่อีกครั้ง <br /><a href='login.php'>Back</a>";
 } else {
 	while ($username = mysql_fetch_array($sql)) {
 	//Admin case
-	if($username['status'] == 1) 
+	if($username['status'] == 1)
 	{
 
 	$_SESSION['session_id'] = session_id();
@@ -33,13 +33,13 @@ $num = mysql_num_rows($sql);
 	$_SESSION['status'] = 1;
 	// ส่งค่า admin
 	echo "<meta http-equiv='refresh' content='1;URL=index.php'>";
-	} else if($user['status'] == 2) {
+	} else if($username['status'] == 2) {
 
 	$_SESSION['session_id'] = session_id();
 	$_SESSION['username'] = $username['username'];
 	$_SESSION['status'] = 2;
 															// ส่งค่า boss
-	echo "<meta http-equiv='refresh' content='1;URL=index.php'>";
+	echo "<meta http-equiv='refresh' content='1;URL=indexboss.php'>";
 															}
 													}
 										}
