@@ -2,7 +2,7 @@
 session_start(); //เปิด session
 
 //ตรวจสอบว่าทำการ Login เข้าสู่ระบบมารึยัง
-if($_SESSION['session_id'] ==''){
+if($_SESSION['session_id'] == ''){
 	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
 }
 
@@ -76,7 +76,7 @@ else if($_SESSION['status'] != 1) {
 
         <table width="100%">
             <td>
-                <h1 class="page-header"><i class="fa fa-plus-square custom" style="font-size:36px"></i> เพิ่มประเภทยา&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <h1 class="page-header"><i class="fa fa-plus-square custom" style="font-size:36px"></i> เพิ่มข้อมูลการรักษา&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
@@ -87,7 +87,7 @@ else if($_SESSION['status'] != 1) {
 			<form name="addtypemed" method="post" action="addmedsave.php">
 
                 <center>
-						<h4>รหัสประเภทยา <input type="text" id="id_med" name="id_med" value="" size="20" maxlength="30"/>
+						<h4>รหัสนักเรียน <input type="text" id="id_med" name="id_med" value="" size="20" maxlength="30"/>
 						&nbsp; &nbsp;&nbsp;&nbsp;
 						ชื่อประเภทยา <input type="text" id="typename_med" name="typename_med" value="" size="20" maxlength="30"/>    &nbsp; &nbsp;&nbsp;&nbsp;
 						<button type="button" class="btn btn-primary" name="save" value="save">บันทึก</button>

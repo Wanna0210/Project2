@@ -1,14 +1,14 @@
 <?php
 session_start();
-if ($_SESSION['session_id'] == '') {
-   echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-} elseif ($_SESSION['status'] !=1) {
-  echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-} else {
 
+if($_SESSION['session_id'] == '') {
+	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
 }
-?>
 
+elseif ($_SESSION['status'] != 1) {
+		echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
+}
+ ?>
 
 <!DOCTYPE html>
 
@@ -66,7 +66,7 @@ if ($_SESSION['session_id'] == '') {
         <table width="100%">
             <td>
                 <h1 class="page-header">  <i class="material-icons" style="font-size:48px">person_outline </i> Admin&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="log-in.php"> log out</a></p></font >
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
        </table> </div>
@@ -94,7 +94,7 @@ if ($_SESSION['session_id'] == '') {
                     <i class="material-icons">people</i>&nbsp;<a href="studantsdata.php">ข้อมูลนักเรียนทั้งหมด</a>
                 </h5>
                     <h5>
-                    <i class="material-icons">face</i>&nbsp;<a href="#">ข้อมูลการรักษาทั้งหมด</a>
+                    <i class="material-icons">face</i>&nbsp;<a href="datatreatstudents.php">ข้อมูลการรักษาทั้งหมด</a>
                 </h5>
 
                 </div>
@@ -104,7 +104,7 @@ if ($_SESSION['session_id'] == '') {
                   <i class="fa fa-plus-square" style="font-size:24px"></i>&nbsp;&nbsp;<a href="addmedicine.php">เพิ่มข้อมูลยา</a>
                 </h5>
                     <h5>
-                <i class="fa fa-user-md" style="font-size:24px"></i>&nbsp;&nbsp;<a href="#">ข้อมูลจ่ายยา</a>
+                <i class="fa fa-user-md" style="font-size:24px"></i>&nbsp;&nbsp;<a href="dispensing.php">ข้อมูลจ่ายยา</a>
               </h5>
                     <h5>
                   <i class="fa fa-medkit"style="font-size:24px"></i>&nbsp;<a href="alldrug.php">ข้อมูลยาทั้งหมด</a>

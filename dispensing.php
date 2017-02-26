@@ -1,18 +1,15 @@
 <?php
-session_start(); //เปิด session
+session_start();
 
-//ตรวจสอบว่าทำการ Login เข้าสู่ระบบมารึยัง
-if($_SESSION['session_id'] == ''){
+if($_SESSION['session_id'] == '') {
 	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
 }
 
-//ตรวจสอบสถานะว่าใช่ admin รึเปล่า ถ้าไม่ใช่ให้หยุดอยู่แค่นี้
-else if($_SESSION['status'] != 1) {
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-} else {
-
+elseif ($_SESSION['status'] != 1) {
+		echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
 }
-?>
+ ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +68,7 @@ else if($_SESSION['status'] != 1) {
 <br>
     <div class="row">
 
-      <table width="100%">   <td> <h1 class="page-header">  <i class="fa fa-medkit"style="font-size:36px"></i> ข้อมูลยาทั้งหมด&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      <table width="100%">   <td> <h1 class="page-header">  <i class="fa fa-user-md" style="font-size:36px"></i> ข้อมูลจ่ายยา&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
@@ -84,13 +81,12 @@ else if($_SESSION['status'] != 1) {
             <tr>
               <th>รหัสยา</th>
                 <th>ชื่อยา/อุปกรณ์ปฐมพยาบาล</th>
+                <th>วันที่</th>
+                <th>จำนวนที่ใช้ไป</th>
+                <th>หน่วย</th>
                 <th>จำนวนคงเหลือ</th>
                 <th>หน่วย</th>
-                <th>ขนาดบรรจุภัณฑ์</th>
-                <th>หน่วย</th>
-                <th>วันหมดอายุ</th>
-                <th>แก้ไข</th>
-                <th>รายละเอียด</th>
+
             </tr>
         </thead>
         <tfoot>
@@ -100,35 +96,32 @@ else if($_SESSION['status'] != 1) {
           <tr>
             <td>C02-11</td>
             <td>Hydroxycine</td>
-            <td>5</td>
-            <td>แผง</td>
-            <td>กล่อง</td>
-            <td>5</td>
-            <td>2/11/2589</td>
-            <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-            <td><a href=index.php>รายละเอียด<i class="fa fa-eye" aria-hidden="true"></i></a></td>
+            <td>5-10-59</td>
+            <td>2</td>
+            <td>เม็ด</td>
+            <td>30</td>
+            <td>เม็ด</td>
+
 
           </tr>
           <tr>
             <td>C03-11</td>
             <td>Paracetamon</td>
-            <td>5</td>
-            <td>แผง</td>
-            <td>กล่อง</td>
-            <td>8</td>
-              <td>2/11/2589</td>
-            <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-            <td>Hydroxycine</td>
+            <td>8-07-59</td>
+            <td>2</td>
+            <td>เม็ด</td>
+            <td>80</td>
+            <td>เม็ด</td>
+
           </tr><tr>
             <td>C02-11</td>
             <td>Hydroxycine</td>
-            <td>5</td>
-            <td>แผง</td>
-            <td>กล่อง</td>
-            <td>5</td>
-              <td>2/11/2589</td>
-              <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-            <td>Hydroxycine</td>
+            <td>8-07-59</td>
+            <td>2</td>
+            <td>เม็ด</td>
+            <td>100</td>
+            <td>เม็ด</td>
+
           </tr>
         </tbody></center>
 </table>

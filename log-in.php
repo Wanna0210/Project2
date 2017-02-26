@@ -11,10 +11,11 @@
     <meta name="author" content="">
   <title>Nurse Room Management Information System</title>
 
-   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
 
-    <!-- Custom CSS -->
-    <link href="css/col.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/stylelogin.css" media="screen" type="text/css" />
+
+
 
 
 
@@ -22,19 +23,24 @@
 
 <body>
 <center>
-
- <img id="profile-img" class="profile-img-card" src="img_fjords.jpg"width="135" height="135" border="1" />
+<div class="wrap">
+  <div class="avatar">
+    <img src="medicine-box-2-icon.png">
+  </div>
 <div id="loginbox">
 <div class="col-xs-3">
 <form action="checklogin.php" method="post">
-Username : <input type="text" class="form-control"  name="username" size="20" /><br />
-Password : <input type="password" class="form-control"  name="password" size="20" /><br />
-<input type="submit" value=" Log in " /></div>
+<input type="text" class="form-control"  name="username" size="20" placeholder="username"  />
+<div class="bar">
+  <i></i>
+</div>
+<input type="password" class="form-control"  name="password" size="20" placeholder="password"  />
+	<button  type="submit" value=" Log in "> LOGIN</button></div>
 </div>
 </form>
-
+</div>
 
    </center>
-
+  <script src="js/index.js"></script>
 </body>
 </html>
