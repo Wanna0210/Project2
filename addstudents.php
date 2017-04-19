@@ -1,16 +1,3 @@
-<?php
-session_start(); //เปิด session
-
-//ตรวจสอบว่าทำการ Login เข้าสู่ระบบมารึยัง
-if($_SESSION['session_id'] == ''){
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-}
-
-//ตรวจสอบสถานะว่าใช่ admin รึเปล่า ถ้าไม่ใช่ให้หยุดอยู่แค่นี้
-else if($_SESSION['status'] != 1) {
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +60,7 @@ else if($_SESSION['status'] != 1) {
         <table width="100%">
             <td>
                 <h1 class="page-header">  <i class="material-icons" style="font-size:36px">person_add </i> เพิ่มมูลนักเรียน&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="login.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
        </table> </div>
@@ -85,29 +72,29 @@ else if($_SESSION['status'] != 1) {
             <form name="form1" method="post" action="" OnReset="JavaScript:fncAlert();">  <!--ล้างข้อมูล-->
 
 <table> <br>
-                  <tr><td> <h4>รหัสนักเรียน :&nbsp; &nbsp;&nbsp;</h4></td><td colspan="2"><input type="text" name="id_student" value="" size="20" maxlength="10"/><br></td></tr>
+                  <tr><td> <h4>รหัสนักเรียน :&nbsp; &nbsp;&nbsp;</h4></td><td colspan="2"><input type="text" name="id_med" value="" size="20" maxlength="10"/><br></td></tr>
 <td><br></td>
 
 <table>
                   <tr><td><h4>  คำนำหน้า : &nbsp;  &nbsp; &nbsp;&nbsp; </h4></td>
-                    <td><div class="col-xs-13"><select class="form-control" name="tname" id="tname" data-width="fit">
-<option value="master">เด็กชาย</option>
-<option value="miss">เด็กหญิง</option>
-<option value="mr">นาย</option>
-<option value="ms">นางสาว</option>
-</select></td><td><h4>&nbsp;  &nbsp;  ชื่อ : &nbsp;  <input type="text" name="fname" value="" size="20" maxlength="15"/>&nbsp; นามสกุล : &nbsp;
-  <input type="text" name="lname" value="" size="20" maxlength="15"/></td></tr></table><table>
+                    <td><div class="col-xs-13"><select class="form-control" name="prov2" id="prov2" data-width="fit">
+<option value="เด็กชาย">เด็กชาย</option>
+<option value="เด็กหญิง">เด็กหญิง</option>
+<option value="นาย">นาย</option>
+<option value="นางสาว">นางสาว</option>
+</select></td><td><h4>&nbsp;  &nbsp;  ชื่อ : &nbsp;  <input type="text" name="firstname" value="" size="20" maxlength="15"/>&nbsp; นามสกุล : &nbsp;
+  <input type="text" name="lastname" value="" size="20" maxlength="15"/></td></tr></table><table>
 <td><br></td>
 <tr>
         <td><h4>วันเกิด :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h4></td>
         <td colspan="2">
-            <div class="form-group"><input type="date" id="birthday" name="birthday" class="form-control"></div></td>
+            <div class="form-group"><input type="date" id="birthDate" class="form-control"></div></td>
             <td><h4>&nbsp;  &nbsp;  หมู่เลือด :&nbsp;
-        <form><label class="radio-inline"><input type="radio" name="A" id="A">A</label>
-            <label class="radio-inline"><input type="radio" name="B" id="B">B</label>
-            <label class="radio-inline"><input type="radio" name="AB" id="AB">AB</label>
-            <label class="radio-inline"><input type="radio" name="O" id="O">O</label>
-            <label class="radio-inline"><input type="radio" name="NA" id="NA">N/A</label></h4>
+        <form><label class="radio-inline"><input type="radio" name="optradio" id="A">A</label>
+            <label class="radio-inline"><input type="radio" name="optradio" id="B">B</label>
+            <label class="radio-inline"><input type="radio" name="optradio" id="AB">AB</label>
+            <label class="radio-inline"><input type="radio" name="optradio" id="O">O</label>
+            <label class="radio-inline"><input type="radio" name="optradio" id="NA">N/A</label></h4>
           </form>
             </td>
 </tr>
@@ -118,9 +105,9 @@ else if($_SESSION['status'] != 1) {
   <td><br></td>
 <tr>
     <td valign="top"><h4>โรคประจำตัว :&nbsp;&nbsp;</h4></td>
-    <td><textarea name="disease" rows="3" cols="40" wrap="physical"></textarea></td>
-    <td valign="top"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แพ้ยา :&nbsp;&nbsp;</h4></td>
-    <td><textarea name="intolerance" rows="3" cols="40" wrap="physical"></textarea></td>
+    <td><textarea name="text" rows="3" cols="40" wrap="physical"></textarea></td>
+    <td valign="top"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โรคประจำตัว :&nbsp;&nbsp;</h4></td>
+    <td><textarea name="text" rows="3" cols="40" wrap="physical"></textarea></td>
 </tr>
 
 </table>

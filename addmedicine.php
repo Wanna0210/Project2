@@ -1,24 +1,9 @@
-<?php
-session_start(); //เปิด session
-
-//ตรวจสอบว่าทำการ Login เข้าสู่ระบบมารึยัง
-if($_SESSION['session_id'] ==''){
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-}
-
-//ตรวจสอบสถานะว่าใช่ admin รึเปล่า ถ้าไม่ใช่ให้หยุดอยู่แค่นี้
-else if($_SESSION['status'] != 1) {
-	echo "<meta http-equiv='refresh' content='1;URL=log-in.php'>";
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,7 +25,7 @@ else if($_SESSION['status'] != 1) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- datepicker-->
-<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+
 
     <!-- selected  -->
 
@@ -77,7 +62,7 @@ else if($_SESSION['status'] != 1) {
         <table width="100%">
             <td>
                 <h1 class="page-header"><i class="fa fa-plus-square custom" style="font-size:36px"></i> เพิ่มประเภทยา&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="login.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
         </table </div>
@@ -85,17 +70,17 @@ else if($_SESSION['status'] != 1) {
         <div class="container">
             <form name="form1" method="post" action="" OnReset="JavaScript:fncAlert();"><!--ล้างข้อมูล-->
 			<form name="addtypemed" method="post" action="addmedsave.php">
-
+                
                 <center>
 						<h4>รหัสประเภทยา <input type="text" id="id_med" name="id_med" value="" size="20" maxlength="30"/>
 						&nbsp; &nbsp;&nbsp;&nbsp;
 						ชื่อประเภทยา <input type="text" id="typename_med" name="typename_med" value="" size="20" maxlength="30"/>    &nbsp; &nbsp;&nbsp;&nbsp;
-						<button type="button" class="btn btn-primary" name="save" value="save">บันทึก</button>
+						<button type="button" class="btn btn-primary" name="save" value="Save">บันทึก</button> 
 						</h4>
 						<div class="col-md-12 portfolio-item"></div>
 
                 </center>
-
+                
         </div>
 
 
@@ -111,16 +96,12 @@ else if($_SESSION['status'] != 1) {
                                     <tr>
                                         <td valign="top">
                                             <h4>ประเภทยา :</td>
-                          <td colspan="2"><select class="form-control" id="sel1">
+                          <td colspan="2"><select>
                             <option value="volvo">เลือกประเภทยา</option>
                             <option value="กรุงเทพฯ">C1 ยาสามัญ</option>
 <option value="volvo">C2 ยาภายนอก</option>
 <option value="volvo">C3 อุปกรณ์ปฐมพยาบาล</option>
-</select>
-
-
-
-</h4></td>
+</select></h4></td>
 
 
                                     </tr>
@@ -141,16 +122,16 @@ else if($_SESSION['status'] != 1) {
                                         <td valign="top">
                                             <h4>วันหมดอายุ :&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</h4></td>
                                         <td colspan="2">
-                                          <input type="text" id="datetimepicker2"/>
+                                            <div class="form-group"><input type="date" id="birthDate" class="form-control"></div>
                                         </td>
                                     </tr>
 
-</div>
+
                     </div>
                     </table>
 
 
-<!--<div class="form-group"><input type="date" id="birthDate" class="form-control"></div>-->
+
 
 
 
@@ -241,7 +222,7 @@ else if($_SESSION['status'] != 1) {
             </div>
             <br>
             <center>
-
+			
                 <script language="javascript">
                 </script>
 
@@ -275,31 +256,9 @@ else if($_SESSION['status'] != 1) {
 
 
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="่js/datejquery.js"></script>
-<script src="build/jquery.datetimepicker.full.js"></script>
-<script>/*
-window.onerror = function(errorMsg) {
-	$('#console').html($('#console').html()+'<br>'+errorMsg)
-}*/
 
-$.datetimepicker.setLocale('th');
-
-$('#datetimepicker2').datetimepicker({
-	yearOffset:0,
-	lang:'th',
-	timepicker:false,
-	format:'d/m/Y',
-	formatDate:'Y/m/d',
-	minDate:'-1970/01/0', // yesterday is minimum date
-	maxDate:'+1980/12/31' // and tommorow is maximum date calendar
-});
-
-
-
-</script>
 
 
  ?>

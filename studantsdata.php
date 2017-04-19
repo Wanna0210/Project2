@@ -24,16 +24,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-    <!-- table -->
-    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
-
     <!-- datepicker-->
 
 
     <!-- selected  -->
-
-
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -66,7 +60,7 @@
         <table width="100%">
             <td>
                 <h1 class="page-header"> <i class="material-icons" style="font-size:36px"> people</i> ข้อมูลนักเรียนทั้งหมด&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="login.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
        </table> </div>
@@ -90,62 +84,29 @@
 </select></td><td> <input name="txtKeyword" type="text" id="txtKeyword" value="">   <button type="search" class="btn btn-primary" name="search" value="Search">ค้นหา</button></td>
 
 </th>
+
   </tr>
+
   </table>
+
   </form>
+
+
+
+
+
+
+
+
+
 </center>
-</div>
+        </div>
 <br><br>
-  <div class="container">
-  <table class="table table-striped table-bordered table table-hover" id="mydata">
-    <thead>
-        <tr>
-          <th>รหัสนักเรียน</th>
-            <th>ชื่อ-สกุล</th>
-            <th>ระดับชั้น</th>
-            <th>วันเดือนปีเกิด</th>
-            <th>edit</th>
-        </tr>
-    </thead>
-    <tfoot>
-
-    </tfoot>
-    <tbody><center>
-      <tr>
-        <td>5610513025</td>
-        <td>จุบจุบ</td>
-        <td>มัธยมศึกษาปีที่6</td>
-        <td>2-11-2537</td>
-                <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-        </tr>
-        <tr>
-          <td>5610513025</td>
-          <td>จุบจุบ</td>
-          <td>มัธยมศึกษาปีที่6</td>
-          <td>2-11-2537</td>
-                  <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-          </tr>
-          <tr>
-            <td>5610513025</td>
-            <td>จุบจุบ</td>
-            <td>มัธยมศึกษาปีที่6</td>
-            <td>2-11-2537</td>
-                    <td><a href=index.php>แก้ไข<i class="material-icons" style="font-size:16px">mode_edit</i></a></td>
-            </tr>
-    </tbody></center>
-</table>
 
 
-  </div>
 
 
-        <br>
-        <center>
-
-             <a href="index.php"><button type="button" class="btn btn-primary" name="back" value="back">ย้อนกลับ</button></a>
-
-
-  </div>
+        </div>
 
 
 
@@ -170,15 +131,10 @@
 
 
 </body>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--table-->
-<script src="js/jquery.dataTables.min.js"></script>
-<script src="js/dataTables.bootstrap.min.js"></script>
-<script>
-$('#mydata').dataTable();
-</script>
+
+
+
 
 </html>

@@ -21,7 +21,7 @@ $sql = mysql_query("SELECT * FROM user_nrm
 
 $num = mysql_num_rows($sql);
 	if($num <= 0){
-	echo "Username หรือ Password อาจจะผิดกรุณา Login ใหม่อีกครั้ง <br /><a href='log-in.php'>Back</a>";
+	echo "Username หรือ Password อาจจะผิดกรุณา Login ใหม่อีกครั้ง <br /><a href='login.php'>Back</a>";
 } else {
 	while ($username = mysql_fetch_array($sql)) {
 	//Admin case

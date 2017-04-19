@@ -56,7 +56,7 @@
     <div class="row">
 
       <table width="100%">   <td> <h1 class="page-header"><i class="fa fa-plus-square custom" style="font-size:36px"></i> รายงานข้อมูลตามอาการ&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="logout.php"> log out</a></p></font >
+  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;    </td><td>  <p align = right><font size = "2"><a href="login.php"> log out</a></p></font >
       </td>     <small></small>
          </h1>
   </table
